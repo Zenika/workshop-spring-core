@@ -1,0 +1,29 @@
+basé sur ContactService, ContactRepository mémoire, puis BD.
+Service : création + récupération par identifiant. Vérifie qu'un contact avec même nom prénom n'existe pas.
+Repository : création, récupération par identifiant, récupération par nom + prénom
+
+DI / configuration :
+
+ * configuration par XML
+ * configuration par annotation
+ * configuration par Java
+ * component scan avec configuration Java
+ * exemple cohabitation
+ * property placeholder (+ message source ?)
+ * profils
+
+AOP :
+ * LogAspect avec annotations (activation XML + activation Java)
+ * LogAspect avec XML
+
+Data access :
+ * JDBC template
+ * transaction (annotation + XML + activation avec Java)
+ * Hibernat
+ * JPA
+
+Web :
+ * ContextLoaderListener
+ * Spring MVC hello world
+ * Spring MVC Web (JSP and co)
+ * Spring MVC REST
