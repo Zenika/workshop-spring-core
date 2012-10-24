@@ -10,6 +10,7 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
@@ -40,7 +41,11 @@ public class JdbcUserRepository implements UserRepository {
 	 */
 	@Override
 	public User getByLogin(String login) {
-		return tpl.queryForObject("select id,login,password from users where login = ?", rowMapper,login);
+		try {
+			return tpl.queryForObject("select id,login,password from users where login = ?", rowMapper,login);
+		} catch(EmptyResultDataAccessException e) {
+			return null;
+		}
 	}
 	
 	@Override

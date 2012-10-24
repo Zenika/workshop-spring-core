@@ -32,7 +32,20 @@ public class UserServiceImpl implements UserService {
 	 */
 	@Override
 	public User authenticate(String login, String password) {
-		return null;
+		User user = userRepository.getByLogin(login);
+		if(user == null) {
+			return null;
+		} else {
+			if(password == null) {
+				throw new IllegalArgumentException("Le mot de passe ne peut être nul !");
+			}
+			password = encoder.encode(password);
+			if(password.equals(user.getPassword())) {
+				return user;
+			} else {
+				return null;
+			}
+		}
 	}
 
 	/* (non-Javadoc)
@@ -42,7 +55,7 @@ public class UserServiceImpl implements UserService {
 	public User create(String login, String password) {
 		User user = userRepository.getByLogin(login);
 		if(user == null) {
-			user = userRepository.create(login, encoder.encode(login));
+			user = userRepository.create(login, encoder.encode(password));
 		} else {
 			throw new IllegalArgumentException("Un utilisateur avec ce login existe déjà");
 		}
@@ -83,6 +96,14 @@ public class UserServiceImpl implements UserService {
 			byte[] bytes = StringUtils.getBytesUtf8(input);
 			return Hex.encodeHexString(DigestUtils.getDigest(algorithm).digest(bytes));
 		}
+	}
+	
+	public void setUserRepository(UserRepository userRepository) {
+		this.userRepository = userRepository;
+	}
+	
+	public void setDigest(String digest) {
+		this.digest = digest;
 	}
 	
 }

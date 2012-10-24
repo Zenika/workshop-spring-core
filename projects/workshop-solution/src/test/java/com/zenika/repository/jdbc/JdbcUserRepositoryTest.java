@@ -8,7 +8,6 @@ import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
@@ -51,12 +50,8 @@ public class JdbcUserRepositoryTest {
 	
 	@Test public void getByLoginUserDoesNotExist() {
 		String login = "mmouse";
-		try {
-			userRepository.getByLogin(login);
-			Assert.fail("Login inexistant, une exception aurait du être lancée.");
-		} catch (EmptyResultDataAccessException e) {
-			// OK
-		}
+		User user =	userRepository.getByLogin(login);
+		Assert.assertNull(user);
 	}
 	
 	@Test public void create() {
