@@ -17,7 +17,7 @@ import com.zenika.business.UserService;
  * @author acogoluegnes
  *
  */
-public class ApplicationIntegrationTest {
+public class ApplicationAnnotationConfigurationIntegrationTest {
 
 	private ConfigurableApplicationContext ctx;
 	
@@ -25,7 +25,7 @@ public class ApplicationIntegrationTest {
 	
 	@Before public void setUp() {
 		ctx = new ClassPathXmlApplicationContext(
-			"classpath:/test-application-configuration.xml"
+			"classpath:/test-application-configuration-annotation.xml"
 		);
 		userService = ctx.getBean(UserService.class);
 	}

@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="userService" class="com.zenika.business.impl.UserServiceImpl" init-method="init">
-		<property name="digest" value="md5" />
+		<property name="digest" value="sha-256" />
 		<property name="userRepository" ref="userRepository" />
 	</bean>
 	

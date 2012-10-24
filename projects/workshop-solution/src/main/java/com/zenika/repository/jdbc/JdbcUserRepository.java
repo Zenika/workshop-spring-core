@@ -10,6 +10,7 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -17,6 +18,7 @@ import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Repository;
 
 import com.zenika.domain.User;
 import com.zenika.repository.UserRepository;
@@ -25,12 +27,14 @@ import com.zenika.repository.UserRepository;
  * @author acogoluegnes
  *
  */
+@Repository
 public class JdbcUserRepository implements UserRepository {
 	
 	private final JdbcOperations tpl;
 	
 	private RowMapper<User> rowMapper = new UserRowMapper();
 	
+	@Autowired
 	public JdbcUserRepository(DataSource dataSource) {
 		this.tpl = new JdbcTemplate(dataSource);
 	}
