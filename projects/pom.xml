@@ -147,8 +147,15 @@
 	</properties>
 
 	<modules>
+		<module>jdbc-solution</module>
+		<module>unit-test-solution</module>
+		<module>xml-configuration-solution</module>
+		<module>annotation-configuration-solution</module>
+		<module>java-configuration-solution</module>
+		<module>aop-solution</module>
+		<module>transaction-solution</module>
 		<module>workshop-start</module>
-		<module>workshop-solution</module>
+		<module>web-solution</module>
 	</modules>
 </project>
 
