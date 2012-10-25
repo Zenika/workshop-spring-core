@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.sql.DataSource;
 
@@ -71,6 +72,15 @@ public class JdbcUserRepository implements UserRepository {
 			}
 		}, keyHolder);
 		return new User(keyHolder.getKey().longValue(),login,password);
+	}
+	
+	/*
+	 * (non-Javadoc)
+	 * @see com.zenika.repository.UserRepository#list()
+	 */
+	@Override
+	public List<User> list() {
+		return tpl.query("select id,login,password from users order by login",rowMapper);
 	}
 	
 	private static class UserRowMapper implements RowMapper<User> {

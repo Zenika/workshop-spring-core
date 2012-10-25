@@ -3,6 +3,8 @@
  */
 package com.zenika.business.impl;
 
+import java.util.List;
+
 import javax.annotation.PostConstruct;
 
 import org.apache.commons.codec.binary.Hex;
@@ -71,6 +73,16 @@ public class UserServiceImpl implements UserService {
 			throw new IllegalArgumentException("Un utilisateur avec ce login existe déjà");
 		}
 		return user;
+	}
+	
+	/*
+	 * (non-Javadoc)
+	 * @see com.zenika.business.UserService#list()
+	 */
+	@Override
+	@Transactional(readOnly=true)
+	public List<User> list() {
+		return userRepository.list();
 	}
 	
 	@PostConstruct

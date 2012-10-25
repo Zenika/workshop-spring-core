@@ -14,4 +14,6 @@
 	
 	<logger name="com.zenika" level="INFO" />
 	
+	<logger name="org.eclipse.jetty" level="INFO" />
+	
 </configuration>
