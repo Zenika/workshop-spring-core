@@ -1,9 +1,8 @@
 .project
 .classpath
 .springBeans
-**/target/*
-**/.settings/*
-.settings/*
+target
+.settings
 *.snm
 *.log
 *.tex~
