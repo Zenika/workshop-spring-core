@@ -147,6 +147,7 @@
 	</properties>
 
 	<modules>
+		<module>jdbc-start</module>
 		<module>jdbc-solution</module>
 		<module>unit-test-solution</module>
 		<module>xml-configuration-solution</module>
