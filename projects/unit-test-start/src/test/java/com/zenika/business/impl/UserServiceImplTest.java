@@ -47,7 +47,7 @@ public class UserServiceImplTest {
 	}
 	
 	@Test public void getByLoginNullEmptyPassword() {
-		// TODO 06 regarder comment tester une méthode qui lance une exception
+		// TODO 07 regarder comment tester une méthode qui lance une exception
 		String login = "test";
 		when(userRepository.getByLogin(login)).thenReturn(new User(1L, login, "whatever"));
 		try {
@@ -57,6 +57,8 @@ public class UserServiceImplTest {
 			// OK
 		}
 		verify(userRepository).getByLogin(login);
+		
+		// TODO 08 lancer le test
 	}
 	
 	@Test public void getByLoginPassordKo() {

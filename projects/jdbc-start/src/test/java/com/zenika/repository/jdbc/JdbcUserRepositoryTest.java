@@ -38,7 +38,7 @@ public class JdbcUserRepositoryTest {
 			.addScript("classpath:/create-tables.sql")
 			.addScript("classpath:/insert-data.sql")
 			.build();
-		// TODO  instancier le JdbcUserRepository
+		// TODO 05 instancier le JdbcUserRepository
 		
 	}
 	
@@ -47,14 +47,15 @@ public class JdbcUserRepositoryTest {
 	}
 	
 	@Test public void getByLoginUserExists() {
-		// TODO 05 tester getByLogin avec un utilisateur qui existe (acogoluegnes)
+		// TODO 06 tester getByLogin avec un utilisateur qui existe (acogoluegnes)
 		// s'assurer que le User retourné a bien ce login
 	}
 	
 	@Test public void getByLoginUserDoesNotExist() {
-		// TODO 06 tester getByLogin avec un utilisateur qui n'existe pas
+		// TODO 07 tester getByLogin avec un utilisateur qui n'existe pas
 		// s'assurer que la méthode retourne null
 		
+		// TODO 08 lancer le test
 	}
 	
 	@Test public void create() {
