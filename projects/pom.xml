@@ -159,6 +159,7 @@
 		<module>java-configuration-solution</module>
 		<module>aop-start</module>
 		<module>aop-solution</module>
+		<module>transaction-start</module>
 		<module>transaction-solution</module>
 		<module>workshop-start</module>
 		<module>web-solution</module>
