@@ -5,16 +5,11 @@ package com.zenika.business.impl;
 
 import java.util.List;
 
-import javax.annotation.PostConstruct;
-
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.binary.StringUtils;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
 
 import com.zenika.business.UserService;
 import com.zenika.domain.User;
@@ -24,15 +19,13 @@ import com.zenika.repository.UserRepository;
  * @author acogoluegnes
  *
  */
-@Service
+// TODO 02 annoter le service (déclaration, injection par propriété, méthode d'initialisation)
 public class UserServiceImpl implements UserService {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
 
-	@Autowired
 	private UserRepository userRepository;
 	
-	@Value("${digest}")
 	private String digest;
 	
 	private Encoder encoder;
@@ -81,7 +74,6 @@ public class UserServiceImpl implements UserService {
 		return userRepository.list();
 	}
 	
-	@PostConstruct
 	public void init() {
 		if(digest == null || digest.trim().length() == 0) {
 			LOGGER.info("Pas de hachage pour les mots de passe");

@@ -7,7 +7,7 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-	<context:component-scan base-package="com.zenika" />
+	<!-- TODO 03 déclarer le scanning pour les classes applicatives -->
 	
 	<context:property-placeholder properties-ref="properties" />
 	

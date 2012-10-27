@@ -153,6 +153,7 @@
 		<module>unit-test-solution</module>
 		<module>xml-configuration-start</module>
 		<module>xml-configuration-solution</module>
+		<module>annotation-configuration-start</module>
 		<module>annotation-configuration-solution</module>
 		<module>java-configuration-solution</module>
 		<module>aop-solution</module>
