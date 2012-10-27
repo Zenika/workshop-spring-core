@@ -18,7 +18,6 @@ import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
-import org.springframework.stereotype.Repository;
 
 import com.zenika.domain.User;
 import com.zenika.repository.UserRepository;
@@ -27,7 +26,6 @@ import com.zenika.repository.UserRepository;
  * @author acogoluegnes
  *
  */
-@Repository
 public class JdbcUserRepository implements UserRepository {
 	
 	private final JdbcOperations tpl;
