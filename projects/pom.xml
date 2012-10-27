@@ -157,6 +157,7 @@
 		<module>annotation-configuration-solution</module>
 		<module>java-configuration-start</module>
 		<module>java-configuration-solution</module>
+		<module>aop-start</module>
 		<module>aop-solution</module>
 		<module>transaction-solution</module>
 		<module>workshop-start</module>
