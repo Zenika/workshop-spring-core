@@ -155,6 +155,7 @@
 		<module>xml-configuration-solution</module>
 		<module>annotation-configuration-start</module>
 		<module>annotation-configuration-solution</module>
+		<module>java-configuration-start</module>
 		<module>java-configuration-solution</module>
 		<module>aop-solution</module>
 		<module>transaction-solution</module>
@@ -162,4 +163,3 @@
 		<module>web-solution</module>
 	</modules>
 </project>
-
