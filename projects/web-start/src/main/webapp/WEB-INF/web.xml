@@ -6,6 +6,8 @@
 
 	<display-name>Spring</display-name>
 	
+	<!-- TODO 01 déclarer le ContextLoaderListener -->
+	<!-- il se configure à partir du fichier /WEB-INF/applicationContext.xml -->
 	<context-param>
     	<param-name>contextConfigLocation</param-name>
     	<param-value>

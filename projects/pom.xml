@@ -162,6 +162,7 @@
 		<module>transaction-start</module>
 		<module>transaction-solution</module>
 		<module>workshop-start</module>
+		<module>web-start</module>
 		<module>web-solution</module>
 	</modules>
 </project>

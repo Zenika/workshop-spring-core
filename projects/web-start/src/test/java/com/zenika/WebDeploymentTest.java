@@ -13,17 +13,21 @@ import org.eclipse.jetty.webapp.WebAppContext;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
  * @author acogoluegnes
  * 
  */
+// TODO 05 enlever @Ignore
+@Ignore
 public class WebDeploymentTest {
 
 	@Before
 	public void setUp() {
-		System.setProperty("spring.profiles.active", "in-memory-db");
+		// TODO 06 activer le profil in-memory-db
+		
 	}
 
 	@After
@@ -33,6 +37,7 @@ public class WebDeploymentTest {
 
 	@Test
 	public void webDeployment() throws Exception {
+		// TODO 07 lancer le test
 		Server server = initServer();
 		int port = server.getConnectors()[0].getPort();
 
@@ -63,5 +68,4 @@ public class WebDeploymentTest {
 		server.setStopAtShutdown(true);
 		return server;
 	}
-
 }
