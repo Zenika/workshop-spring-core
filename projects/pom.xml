@@ -161,7 +161,8 @@
 		<module>aop-solution</module>
 		<module>transaction-start</module>
 		<module>transaction-solution</module>
-		<module>workshop-start</module>
+		<module>hibernate-start</module>
+		<module>hibernate-solution</module>
 		<module>web-start</module>
 		<module>web-solution</module>
 	</modules>
