@@ -40,6 +40,8 @@
 			<tx:method name="*" propagation="REQUIRED"/>
 		</tx:attributes>
 	</tx:advice>
+	
+	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 
 	<jdbc:embedded-database id="dataSource" type="H2">
 		<jdbc:script location="classpath:/create-tables.sql" />

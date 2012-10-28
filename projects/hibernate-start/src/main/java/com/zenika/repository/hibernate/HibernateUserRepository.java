@@ -6,7 +6,7 @@ package com.zenika.repository.hibernate;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Restrictions;
+import org.springframework.stereotype.Repository;
 
 import com.zenika.domain.User;
 import com.zenika.repository.UserRepository;
@@ -15,6 +15,7 @@ import com.zenika.repository.UserRepository;
  * @author acogoluegnes
  *
  */
+@Repository
 public class HibernateUserRepository implements UserRepository {
 	
 	private final SessionFactory sessionFactory;
@@ -30,10 +31,7 @@ public class HibernateUserRepository implements UserRepository {
 	@Override
 	public User getByLogin(String login) {
 		// TODO 01 récupérer un utilisateur par son login
-		return (User) sessionFactory.getCurrentSession()
-				.createCriteria(User.class)
-				.add(Restrictions.eq("login", login))
-				.uniqueResult();
+		return null;
 	}
 
 	/* (non-Javadoc)
