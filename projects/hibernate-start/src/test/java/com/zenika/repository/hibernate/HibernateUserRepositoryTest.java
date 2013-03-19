@@ -5,8 +5,7 @@ package com.zenika.repository.hibernate;
 
 import javax.sql.DataSource;
 
-import junit.framework.Assert;
-
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -55,9 +54,9 @@ public class HibernateUserRepositoryTest {
 	}
 	
 	@Test public void create() {
-		int initialCount = tpl.queryForInt("select count(1) from users");
+		int initialCount = tpl.queryForObject("select count(1) from users",Integer.class);
 		userRepository.create("mmouse", "password");
-		Assert.assertEquals(initialCount+1,tpl.queryForInt("select count(1) from users"));
+		Assert.assertEquals(initialCount+1,tpl.queryForObject("select count(1) from users",Integer.class).intValue());
 	}
 	
 	

@@ -15,7 +15,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>3.6.10.Final</version>
+			<version>${hibernate.version}</version>
 		</dependency>
 
 	</dependencies>
