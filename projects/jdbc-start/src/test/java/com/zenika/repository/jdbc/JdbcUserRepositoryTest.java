@@ -59,10 +59,10 @@ public class JdbcUserRepositoryTest {
 	}
 	
 	@Test public void create() {
-		JdbcOperations tpl = new JdbcTemplate(dataSource);;
-		int initialCount = tpl.queryForInt("select count(1) from users");
+		JdbcOperations tpl = new JdbcTemplate(dataSource);
+		int initialCount = tpl.queryForObject("select count(1) from users",Integer.class);
 		userRepository.create("mmouse", "password");
-		Assert.assertEquals(initialCount+1,tpl.queryForInt("select count(1) from users"));
+		Assert.assertEquals(initialCount+1,tpl.queryForObject("select count(1) from users",Integer.class).intValue());
 	}
 	
 	
