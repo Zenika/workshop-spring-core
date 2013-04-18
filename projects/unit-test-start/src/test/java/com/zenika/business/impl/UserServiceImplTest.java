@@ -44,6 +44,8 @@ public class UserServiceImplTest {
 		
 		// on lance la vérification sur les appels au mock
 		verify(userRepository).getByLogin(login);
+		
+		// TODO 06 lancer le test
 	}
 	
 	@Test public void getByLoginNullEmptyPassword() {
@@ -57,8 +59,6 @@ public class UserServiceImplTest {
 			// OK
 		}
 		verify(userRepository).getByLogin(login);
-		
-		// TODO 08 lancer le test
 	}
 	
 	@Test public void getByLoginPassordKo() {
