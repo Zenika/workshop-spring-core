@@ -27,8 +27,7 @@ public class ListUsersServlet extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
 		// TODO 02 récupérer le contexte Spring, puis le bean UserService pour l'assigner à la propriété userService
-		ApplicationContext ctx = WebApplicationContextUtils.getRequiredWebApplicationContext(getServletContext());
-		userService = ctx.getBean(UserService.class);
+		
 	}
 
 	@Override
