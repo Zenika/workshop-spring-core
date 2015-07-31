@@ -158,6 +158,8 @@
 		<module>transaction-solution</module>
 		<module>hibernate-start</module>
 		<module>hibernate-solution</module>
+		<module>jpa-start</module>
+		<module>jpa-solution</module>
 		<module>web-start</module>
 		<module>web-solution</module>
 	</modules>
