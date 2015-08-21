@@ -162,5 +162,7 @@
 		<module>jpa-solution</module>
 		<module>web-start</module>
 		<module>web-solution</module>
+		<module>spring-boot-start</module>
+		<module>spring-boot-solution</module>
 	</modules>
 </project>
