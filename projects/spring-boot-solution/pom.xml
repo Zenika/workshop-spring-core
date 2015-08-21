@@ -62,6 +62,14 @@
 
     </dependencies>
 
+	 <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 	<repositories>
 		<repository>
@@ -73,5 +81,12 @@
 			</snapshots>
 		</repository>
 	</repositories>
+	
+	<pluginRepositories>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <url>http://repo.spring.io/milestone</url>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>
