@@ -16,7 +16,7 @@ public class Application {
 
     public static void main(String[] args) {
         // TODO 02 Ajouter le code pour démarrer l'application
-        SpringApplication.run(Application.class);
+        
 
         // TODO 03 Lancer l'application et aller sur http://localhost:8080/actuator
         // un document JSON doit s'afficher si tout fonctionne correctement

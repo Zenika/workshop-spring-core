@@ -59,6 +59,7 @@ public class UserControllerIntegrationTest {
     // Ce test est "out-of-container": il ne lance pas
     // le serveur d'applications, mais une version "bouchon"
     // de Spring MVC
+    @Ignore
     @Test
     public void usersHtml() throws Exception {
         mvc.perform(get("/users").accept(MediaType.TEXT_HTML))
