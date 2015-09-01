@@ -24,7 +24,7 @@ public class UserController {
     // TODO 11 Configurer Spring Boot pour initialiser la base de données
     // Sans cette initialisation, les utilisateurs ne seront pas
     // dans la base
-    // Ouvrir le fichier src/main/resources/application.properties
+    // Ouvrir le fichier application.properties (à la racine du projet)
     // Ajouter les entrées de configuration suivantes (sans les // devant)
     // spring.datasource.schema=classpath:/create-tables.sql
     // spring.datasource.data=classpath:/insert-data.sql

@@ -15,4 +15,5 @@ rm -rf ../build/projects/package.sh
 rm -rf ../build/projects/.idea
 rm -rf ../build/projects/.settings
 rm -rf ../build/projects/*/.settings
+cp ../settings.xml ../build/
 cd ../build/ && zip -r spring-workshop.zip .
