@@ -16,7 +16,8 @@ import com.zenika.business.UserService;
  */
 // TODO 04 supprimer @Ignore
 @Ignore
-// TODO 05 configurer le TestContext Framework pour utiliser le fichier classpath:/test-application-configuration-annotation.xml
+// TODO 05 configurer le TestContext Framework pour utiliser la classe TestConfiguration
+// NB: la classe TestConfiguration importe la classe ComponentsConfiguration
 public class ApplicationAnnotationConfigurationIntegrationTest {
 
 	// TODO 06 faire en sorte que le UserService soit injecté dans le test

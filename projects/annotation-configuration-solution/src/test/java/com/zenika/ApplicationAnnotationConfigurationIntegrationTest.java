@@ -18,7 +18,7 @@ import com.zenika.business.UserService;
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:/test-application-configuration-annotation.xml")
+@ContextConfiguration(classes=TestConfiguration.class)
 public class ApplicationAnnotationConfigurationIntegrationTest {
 
 	@Autowired private UserService userService;
