@@ -3,14 +3,10 @@
  */
 package com.zenika;
 
-import org.junit.Assert;
-
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import com.zenika.business.UserService;
+import org.junit.*;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.zenika.business.UserService;
 
@@ -20,15 +16,26 @@ import com.zenika.business.UserService;
  */
 // TODO 04 enlever @Ignore
 @Ignore
-@RunWith(SpringJUnit4ClassRunner.class)
-// TODO 05 configurer @ContextConfiguration pour utiliser ApplicationConfiguration
-@ContextConfiguration
 public class ApplicationJavaConfigurationIntegrationTest {
 
-	@Autowired private UserService userService;
+	UserService userService;
+
+	@Before
+	public void setUp() {
+		// TODO 05 initialiser le contexte Spring à partir de la classe ApplicationConfiguration
+
+		// TODO 06 récupérer le UserService
+
+	}
+
+	@After
+	public void tearDown() {
+		// TODO 07 appeler close sur le contexte à la fin du test
+
+	}
 	
 	@Test public void createAndAuthenticateUser() {
-		// TODO 06 lancer le test
+		// TODO 08 lancer le test
 		String login = "mmouse";
 		String password = "this is a test";
 		userService.create(login,password);
