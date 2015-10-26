@@ -16,6 +16,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.zenika.TestConfiguration;
 import com.zenika.domain.User;
 import com.zenika.repository.UserRepository;
 
@@ -26,7 +27,7 @@ import com.zenika.repository.UserRepository;
 // TODO 05 enlever @Ignore
 @Ignore
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:/test-hibernate.xml")
+@ContextConfiguration(classes=TestConfiguration.class)
 public class HibernateUserRepositoryTest {
 	
 	@Autowired private UserRepository userRepository;

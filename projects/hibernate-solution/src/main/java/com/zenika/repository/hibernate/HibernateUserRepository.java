@@ -5,6 +5,8 @@ package com.zenika.repository.hibernate;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
@@ -17,6 +19,7 @@ import com.zenika.repository.UserRepository;
  *
  */
 @Repository
+@Transactional
 public class HibernateUserRepository implements UserRepository {
 	
 	private final SessionFactory sessionFactory;

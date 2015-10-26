@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.zenika.domain.User;
 import com.zenika.repository.UserRepository;
@@ -16,6 +17,7 @@ import com.zenika.repository.UserRepository;
  *
  */
 @Repository
+@Transactional
 public class HibernateUserRepository implements UserRepository {
 	
 	private final SessionFactory sessionFactory;

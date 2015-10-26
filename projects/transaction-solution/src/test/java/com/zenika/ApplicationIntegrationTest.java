@@ -4,7 +4,6 @@
 package com.zenika;
 
 import org.junit.Assert;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,7 @@ import com.zenika.business.UserService;
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:/test-application-configuration.xml")
+@ContextConfiguration(classes=TestConfiguration.class)
 public class ApplicationIntegrationTest {
 
 	@Autowired private UserService userService;
