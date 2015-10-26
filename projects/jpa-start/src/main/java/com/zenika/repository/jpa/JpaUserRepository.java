@@ -9,6 +9,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.zenika.domain.User;
 import com.zenika.repository.UserRepository;
@@ -18,6 +19,7 @@ import com.zenika.repository.UserRepository;
  *
  */
 @Repository
+@Transactional
 public class JpaUserRepository implements UserRepository {
 	
 	@PersistenceContext
