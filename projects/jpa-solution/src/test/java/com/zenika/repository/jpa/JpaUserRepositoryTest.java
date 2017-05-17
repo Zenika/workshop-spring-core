@@ -3,8 +3,9 @@
  */
 package com.zenika.repository.jpa;
 
-import javax.sql.DataSource;
-
+import com.zenika.TestConfiguration;
+import com.zenika.domain.User;
+import com.zenika.repository.UserRepository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,17 +15,15 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 
-import com.zenika.TestConfiguration;
-import com.zenika.domain.User;
-import com.zenika.repository.UserRepository;
+import javax.sql.DataSource;
 
 /**
  * @author acogoluegnes
  *
  */
-@RunWith(SpringJUnit4ClassRunner.class)
+@RunWith(SpringRunner.class)
 @ContextConfiguration(classes=TestConfiguration.class)
 public class JpaUserRepositoryTest {
 	
