@@ -18,3 +18,4 @@ target
 *.iml
 spring-workshop
 bin
+.idea
