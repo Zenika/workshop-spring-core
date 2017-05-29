@@ -1,0 +1,26 @@
+{
+  "name": "workshop-spring-core",
+  "description": "Workshop Spring Core",
+  "version": "0.0.1",
+  "author": "Zenika",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zenika/workshop-spring-core"
+  },
+  "private": true,
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "gulp": "^3.9.0",
+    "zenika-formation-framework": "^2.0.0"
+  },
+  "config": {
+    "deploy": {
+      "name": "zen-formation-elk"
+    }
+  },
+  "scripts": {
+    "start": "grunt",
+    "deploy": "zenika-formation-deploy"
+  }
+}
