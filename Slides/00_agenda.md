@@ -1,6 +1,7 @@
-# Suite Elastic <img src="ressources/logo_elk.png" alt="Logo Suite Elastic" >
+# Workshop / Spring Core <img src="ressources/images/spring-by-pivotal.png" alt="Logo Spring" >
 
 <!-- .slide: class="page-title" -->
+
 
 
 
@@ -8,18 +9,19 @@
 
 <!-- .slide: id="master-toc" class="toc" -->
 
-* [Introduction](#/1)
-* [Elasticsearch](#/2)
-* [Logstash](#/3)
-* [Kibana](#/4)
+*   [Introduction](#/1)
+*   [Spring Framework](#/2)
+*   [Spring Data](#/3)
+*   [Spring Web](#/4)
+*   [Spring Boot](#/5)
 
 
 
 ## Logistique
 
-* Horaires
-* Déjeuner & pauses
-* Autres questions ?
+*   Horaires
+*   Déjeuner & pauses
+*   Autres questions ?
 
 
 

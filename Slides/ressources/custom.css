@@ -13,6 +13,8 @@
 .reveal pre {
   margin: 1px 0;
   width: 100%;
+  padding: 10px;
+  border: 1px solid #cacaca !important
 }
 .left-column {
   float:left;

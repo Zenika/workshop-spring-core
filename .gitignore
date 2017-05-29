@@ -19,3 +19,4 @@ target
 spring-workshop
 bin
 .idea
+node_modules
