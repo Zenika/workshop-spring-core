@@ -1,4 +1,4 @@
-# Workshop Spring Core<br><br>Accès aux données
+# Workshop Spring Core<br><br><i class="fa fa-database" aria-hidden="true"></i>Accès aux données
 <!-- .slide: class="page-title" -->
 
 

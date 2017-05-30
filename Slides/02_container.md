@@ -1,4 +1,5 @@
-# Workshop Spring Core<br><br>Le conteneur
+# Workshop Spring Core<br><br><i class="fa fa-leaf" aria-hidden="true"></i>Le conteneur
+
 <!-- .slide: class="page-title" -->
 
 
