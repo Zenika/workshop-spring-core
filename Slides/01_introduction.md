@@ -1,4 +1,4 @@
-# Workshop Spring Core</br>Introduction
+# Workshop Spring Core<br><br>Introduction
 
 <!-- .slide: class="page-title" -->
 
@@ -9,9 +9,9 @@
 <!-- .slide: class="toc" -->
 
 *   **[Introduction](#/1)**
-*   [Spring Framework](#/2)
-*   [Spring Data](#/3)
-*   [Spring Web](#/4)
+*   [Le conteneur](#/2)
+*   [Accès aux données](#/3)
+*   [Le Web](#/4)
 *   [Spring Boot](#/5)
 
 

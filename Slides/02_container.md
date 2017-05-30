@@ -1,4 +1,4 @@
-# Workshop Spring Core</br>Spring Framework
+# Workshop Spring Core<br><br>Le conteneur
 <!-- .slide: class="page-title" -->
 
 
@@ -8,9 +8,9 @@
 <!-- .slide: class="toc" -->
 
 *   [Introduction](#/1)
-*   **[Spring Framework](#/2)**
-*   [Spring Data](#/3)
-*   [Spring Web](#/4)
+*   **[Le conteneur](#/2)**
+*   [Accès aux données](#/3)
+*   [Le Web](#/4)
 *   [Spring Boot](#/5)
 
 
@@ -48,7 +48,7 @@
 
 ## Nos classes
 
-```Java
+```java
 public class JdbcUserRepository implements UserRepository {
 
   private final JdbcOperations tpl;
@@ -76,7 +76,7 @@ public class UserServiceImpl implements UserService {
 
 ## Configuration Java
 
-```Java
+```java
 @Configuration // Déclaration classe de configuration
 public class ApplicationConfiguration {
 
@@ -109,7 +109,7 @@ public class ApplicationConfiguration {
 
 *   Déclaration dans plusieurs classes
 
-```Java
+```java
 @Configuration
 @Import({InfraConfiguration.class,ComponentConfiguration.class})
 public class ApplicationConfiguration { }
@@ -125,7 +125,7 @@ public class ApplicationConfiguration { }
 
 *   Création, utilisation, destruction
 
-```Java
+```java
 ConfigurableApplicationContext ctx = new AnnotationConfigApplicationContext(
     ApplicationConfiguration.class
 );
@@ -145,7 +145,7 @@ ctx.close();
 
 *   Configuration orientée objet
 
-```Java
+```java
 @Configuration
 public class SpringMvcConfiguration extends WebMvcConfigurationSupport {
 
@@ -182,7 +182,7 @@ public class SpringMvcConfiguration extends WebMvcConfigurationSupport {
 
 ## Nos classes
 
-```Java
+```java
 public class JdbcUserRepository implements UserRepository {
 
   private final JdbcOperations tpl;
@@ -210,7 +210,7 @@ public class UserServiceImpl implements UserService {
 
 ## Configuration XML
 
-```XML
+```xml
 <bean id="userRepository" class="c.z.repository.jdbc.JdbcUserRepository">
   <constructor-arg ref="dataSource" />
 </bean>
@@ -226,7 +226,7 @@ public class UserServiceImpl implements UserService {
 
 ## Configuration XML
 
-```XML
+```xml
 <bean id="userRepository" class="c.z.repository.jdbc.JdbcUserRepository">
   <constructor-arg ref="dataSource" />
 </bean>
@@ -243,7 +243,7 @@ public class UserServiceImpl implements UserService {
 
 ## Configuration XML
 
-```XML
+```xml
 <bean id="userService" class="c.z.business.impl.UserServiceImpl"
       init-method="init">
   <property name="digest" value="sha-256" />
@@ -264,7 +264,7 @@ public class UserServiceImpl implements UserService {
 *   Entête du fichier
     *   Cuisine XML
 
-```XML
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -282,7 +282,7 @@ public class UserServiceImpl implements UserService {
 
 *   DataSource
 
-```XML
+```xml
 <jdbc:embedded-database id="dataSource" type="H2">
   <jdbc:script location="classpath:/create-tables.sql" />
   <jdbc:script location="classpath:/insert-data.sql" />
@@ -300,7 +300,7 @@ public class UserServiceImpl implements UserService {
 
 *   Déclaration du namespace
 
-```XML
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -321,7 +321,7 @@ public class UserServiceImpl implements UserService {
 
 *   Déclaration dans plusieurs fichiers
 
-```XML
+```xml
 <import resource="classpath:/application-components.xml" />
 <import resource="classpath:/test-datasource.xml" />
 ```
@@ -335,7 +335,7 @@ public class UserServiceImpl implements UserService {
 
 *   Création, utilisation, destruction
 
-```XML
+```xml
 ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext(
   "classpath:/test-application-configuration.xml"
 );
@@ -389,7 +389,7 @@ ctx.close();
 
 ## Déclaration d'un bean
 
-```Java
+```java
 @Repository
 public class JdbcUserRepository implements UserRepository {
  (...)
@@ -409,7 +409,7 @@ public class UserServiceImpl implements UserService {
 *   Scanning des packages et sous-packages
 *   Java
 
-```Java
+```java
 @Configuration
 @ComponentScan("com.zenika")
 public class ComponentsConfiguration { }
@@ -417,7 +417,7 @@ public class ComponentsConfiguration { }
 *   XML
     *   Importer le namespace "context"
 
-```XML
+```xml
 <context:component-scan base-package="com.zenika" />
 ```
 
@@ -428,7 +428,7 @@ public class ComponentsConfiguration { }
 *   Utiliser `@Autowired`
 *   Constructeurs, champs ou méthodes (setters)
 
-```Java
+```java
 @Autowired
 public JdbcUserRepository(DataSource dataSource) { } // Constructeur
 
@@ -449,9 +449,9 @@ private UserRepository userRepository; // Champ
 
 ## Autowiring : configuration Java
 
-*   `@Autowired` fonctionne aussi entr classes de configuration Java
+*   `@Autowired` fonctionne aussi entre classes de configuration Java
 
-```Java
+```java
 @Configuration // Une classe de configuration
 public class ComponentConfiguration {
 
@@ -485,13 +485,13 @@ public class ComponentConfiguration {
 
 ## Injection de valeurs scalaires
 
-```Java
+```java
 @Value("${digest}")
 private String digest;
 ```
 
 
-```Java
+```java
 @Configuration
 public class TestConfiguration {
 
@@ -522,7 +522,7 @@ public class TestConfiguration {
 
 ## Callback d'initialisation
 
-```Java
+```java
 @PostConstruct
 public void init() {
   (...)
@@ -536,7 +536,7 @@ public void init() {
 
 ## Complément sur les tests
 
-```Java
+```java
 public class ApplicationIntegrationTest {
 
   private ConfigurableApplicationContext ctx;
@@ -561,7 +561,7 @@ public class ApplicationIntegrationTest {
 
 ## Complément sur les tests
 
-```Java
+```java
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes=TestConfiguration.class)
 public class ApplicationIntegrationTest {
@@ -586,4 +586,225 @@ public class ApplicationIntegrationTest {
 
 *   Configuration par annotations
     *   Injection, valeur scalaire, callback initialisation
-*    Test avec le TestContext Framework
+*   Test avec le TestContext Framework
+
+
+
+## AOP
+
+*   Aspect Oriented Programmming
+*   Complète le modèle POJO de Spring
+*   Comment de simples POJO peuvent s'intégrer dans des systèmes techniques complexes ?
+    *   Connexions, transactions, cache, sécurité, log, etc.
+
+
+
+## Buts de l'AOP
+
+*   Compléter la modularisation de la programmation orientée objet
+*   Modulariser les aspects transverses
+    *   Transactions, log, etc.
+*   Afin qu'ils n'apparaissent pas dans le code applicatif
+*   Découplage avec l'environnement
+*   "Separation of concerns"
+
+
+
+## Sans l'AOP
+
+*   Code applicatif noyé au milieu de code technique
+    *   "Code tangling" (enchevêtrement)
+    *   Moins testable, moins maintenable
+*   Code technique disséminé dans l'application
+    *   "Code scattering" (éparpillement)
+    *   Moins maintenable, moins souple
+
+
+
+## Mécanisme AOP dans Spring
+
+*   Intercepter le code applicatif
+*   Utilisation de proxy
+
+<figure>
+    <img src="ressources/images/aop-proxy.svg" alt="AOP Proxy" width="50%"/>
+</figure>
+
+
+
+## Proxy JDK
+
+```java
+// Service cible
+final HelloService targetService = new DefaultHelloService();
+
+InvocationHandler handler = new InvocationHandler() {
+
+  @Override
+  public Object invoke(Object proxy, Method method, Object[] args)
+                throws Throwable {
+    // Appel du service cible
+    Object res = method.invoke(targetService, args);
+    return res;
+  }
+};
+HelloService decoratedHelloService = (HelloService) Proxy.newProxyInstance(
+  getClass().getClassLoader(),
+  new Class<?>[]{HelloService.class},
+  handler
+);
+decoratedHelloService.hello();
+```
+
+
+
+## AOP dans Spring
+
+*   Spring propose un framework autour des proxies JDK
+    *   Grâce notamment à AspectJ (Pointcut)
+*   Configuration par annotation
+*   Choix des méthodes interceptées
+*   Possibilité d'intercepter
+    *   Avant, après, autour des méthodes
+    *   Suite à une exception
+
+
+
+## Aspect
+
+```java
+@Aspect // Identifie la classe comme un aspect
+public class LogAspect {
+
+  (...)
+
+  // La méthode de l'aspect est l'advice
+  // Type d'advice (avant, après, autour, ...)
+  // Expression de pointcut
+  @Around("execution(* com.zenika.business.*.*(..))")
+  public Object log(ProceedingJoinPoint jp) throws Throwable {
+    LOGGER.info("Appel à {}",jp.getSignature().toShortString());
+    Object res = jp.proceed(); // Appel de la méthode interceptée
+    LOGGER.info("Fin de l'appel");
+    return res;
+  }
+
+}
+```
+
+
+
+## Activation de l'aspect
+
+*   Généralement dans une classe dédiée
+
+```java
+@Configuration
+@EnableAspectJAutoProxy
+public class AopConfiguration {
+
+    @Bean public LogAspect logAspect() {
+        return new LogAspect();
+    }
+
+}
+```
+
+
+
+<!-- .slide: class="page-questions" -->
+
+
+
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> TP : aop-start
+
+*   Configuration et activation d'un aspect
+*   Test d'intégration
+
+
+
+## Test
+
+*   Découplage de l'infrastrcuture
+*   Meilleure testabilité
+*   "Separation of concerns"
+*   une composante de la modularité
+    *   Code applicatif vs. code technique
+
+
+
+## Un service métier
+
+```java
+public class UserServiceImpl implements UserService {
+  (...)
+  public User authenticate(String login, String password) {
+    User user = userRepository.getByLogin(login);
+    if(user == null) {
+      return null;
+    } else {
+      if(password == null) {
+        throw new IllegalArgumentException("Password can't be null");
+      }
+      password = encoder.encode(password);
+      if(password.equals(user.getPassword())) {
+        return user;
+      } else {
+        return null;
+      }
+    }
+  }
+}
+```
+
+
+<i class="fa fa-arrow-right"></i> Comment tester sans base de données ??
+
+
+
+## Test unitaire
+
+*   Tester en isolation complète
+*   Simulation des dépendances
+    *   Stub (implémentation dédiée)
+    *   Mock (dicter le comportement à la volée)
+
+
+
+## Mockito
+
+```java
+public class UserServiceImplTest {
+
+  private UserRepository userRepository;
+
+  private UserServiceImpl userService;
+
+  @Before public void setUp() {
+    // Création d'un mock
+    userRepository = mock(UserRepository.class);
+    userService = new UserServiceImpl();
+    userService.setUserRepository(userRepository);
+    userService.init();
+  }
+
+  @Test public void getByLoginNoUser() {
+    String login = "test";
+    // Comportement programmé
+    when(userRepository.getByLogin(login)).thenReturn(null);
+    Assert.assertNull(userService.authenticate(login, ""));
+    // Vérification de l'appel
+    verify(userRepository).getByLogin(login);
+  }
+}
+```
+
+
+
+<!-- .slide: class="page-questions" -->
+
+
+
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> TP : unit-test-start
+
+*   Tester un service avec Mockito
