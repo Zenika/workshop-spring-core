@@ -3,15 +3,6 @@ Détails du modèle dans le [wiki](https://github.com/Zenika/Formation--Modele/w
 Documentation du [framework](https://github.com/Zenika/zenika-formation-framework)
 
 
-## Supports PDF et Live
-
-Les supports peuvent être obtenus à ces adresses :
-
-Version release : https://zen-formation-elk.appspot.com/ [![Circle CI](https://circleci.com/gh/Zenika/formation-elk/tree/release.svg?style=svg&circle-token=0cf314369fb9963cb2bd9dfb9e38d997da32b46b)](https://circleci.com/gh/Zenika/formation-elk/tree/release)
-
-Version courante : https://master-dot-zen-formation-elk.appspot.com/ [![Circle CI](https://circleci.com/gh/Zenika/formation-elk/tree/master.svg?style=svg&circle-token=0cf314369fb9963cb2bd9dfb9e38d997da32b46b)](https://circleci.com/gh/Zenika/formation-elk/tree/master)
-
-
 ## Organisation
 
 ``` shell
