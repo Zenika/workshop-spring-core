@@ -1,13 +1,13 @@
-# Spring Core Workshop <img src="resources/images/spring-by-pivotal.png" alt="Logo Spring" >
+# Spring Core Workshop <img src="ressources/images/spring-by-pivotal.png" alt="Logo Spring" >
 
-<!-- .slide: class = "page-title" -->
+<!-- .slide: class="page-title" -->
 
 
 
 
 ## Summary
 
-<!-- .slide: id = "master-toc" class = "toc" -->
+<!-- .slide: id="master-toc" class="toc" -->
 
 *   [Introduction](#/1)
 *   [Spring container](#/2)
@@ -25,4 +25,4 @@
 
 
 
-<!-- .slide: class = "page-questions" -->
+<!-- .slide: class="page-questions" -->

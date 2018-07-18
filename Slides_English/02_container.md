@@ -487,7 +487,6 @@ public class ComponentConfiguration {
 private String digest;
 ```
 
-
 ```java
 @Configuration
 public class TestConfiguration {
@@ -748,8 +747,7 @@ public class UserServiceImpl implements UserService {
 }
 ```
 
-
-<i class="fa fa-arrow-right"></i> How to do testing without a database??
+<i class="fa fa-arrow-right"></i> How to do integration testing without a database?
 
 
 

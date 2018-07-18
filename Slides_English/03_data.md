@@ -272,14 +272,13 @@ public class HibernateUserRepository implements UserRepository {
 
 
 
-## Gestion des exceptions
+## Exception management
 
 *   `HibernateException`s
     *   Related to Hibernate API
 *   In order to get `DataAccessException`s
     *   Annotate DAOs with `@Repository`
     *   Declare a `PersistenceExceptionTranslationPostProcessor`
-
 
 ```java
 @Repository
@@ -380,7 +379,7 @@ public class JpaUserRepository implements UserRepository {
 *   Explicit transaction configuration for testing
 
 
-## Gestion des exceptions
+## Exception management
 
 *   `PersistenceException`s are raised
     *   Uses JPA API
