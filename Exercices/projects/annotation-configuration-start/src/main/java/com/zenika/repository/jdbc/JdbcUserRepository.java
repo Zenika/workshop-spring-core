@@ -26,7 +26,7 @@ import com.zenika.repository.UserRepository;
  * @author acogoluegnes
  *
  */
-// TODO 01 annoter le repository (déclaration + injection par constructeur)
+// TODO 01 annotate the service (declaration + constructor injection))
 public class JdbcUserRepository implements UserRepository {
 	
 	private final JdbcOperations tpl;
@@ -52,10 +52,10 @@ public class JdbcUserRepository implements UserRepository {
 	
 	@Override
 	public User create(final String login, final String password) {
-		// solution simple, ne permet pas de récupérer l'identifiant généré
+		// simple solution, cannot retrieve the generated identifier
 		// tpl.update("insert into users (login,password) values (?,?)",login,password);
 
-		// solution plus avancée pour pouvoir récupérer l'identifiant généré
+		// advanced solution, can retrieve the generated identifier
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 		tpl.update(new PreparedStatementCreator() {
 			

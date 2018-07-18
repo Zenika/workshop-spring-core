@@ -23,7 +23,7 @@ import javax.sql.DataSource;
  * @author acogoluegnes
  *
  */
-// TODO 05 enlever @Ignore
+// TODO 05 remove @Ignore
 @Ignore
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes=TestConfiguration.class)
@@ -35,7 +35,7 @@ public class HibernateUserRepositoryTest {
 	
 	private JdbcOperations tpl;
 	
-	// TODO 06 lancer le test
+	// TODO 06 run the test
 	
 	@Before public void setUp() {
 		tpl = new JdbcTemplate(dataSource);

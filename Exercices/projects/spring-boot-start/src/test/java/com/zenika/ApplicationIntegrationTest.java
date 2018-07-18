@@ -26,10 +26,10 @@ public class ApplicationIntegrationTest {
 	TestRestTemplate tpl = new TestRestTemplate();
 
 	@Ignore
-	// TODO 18 Enlever @Ignore et lancer le test
-	// Le test doit passer
-	// Ce test lance véritablement l'application web
-    // et effectue de véritables requetes HTTP
+	// TODO 18 remove @Ignore and run the test
+	// The test must pass
+	// It actually starts the Web application
+    // and performs actual HTTP requests
 	@Test public void listUsers() {
 		User[] users = tpl.getForObject(baseUrl() + "users", User[].class);
 		Assert.assertEquals(2,users.length);

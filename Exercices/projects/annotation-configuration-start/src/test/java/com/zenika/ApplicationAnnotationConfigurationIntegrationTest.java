@@ -14,17 +14,17 @@ import com.zenika.business.UserService;
  * @author acogoluegnes
  *
  */
-// TODO 04 supprimer @Ignore
+// TODO 04 remove @Ignore
 @Ignore
-// TODO 05 configurer le TestContext Framework pour utiliser la classe TestConfiguration
-// NB: la classe TestConfiguration importe la classe ComponentsConfiguration
+// TODO 05 configure TestContext framework to use TestConfiguration class
+// NB: TestConfiguration imports ComponentsConfiguration
 public class ApplicationAnnotationConfigurationIntegrationTest {
 
-	// TODO 06 faire en sorte que le UserService soit injecté dans le test
+	// TODO 06 have UserService injected in the test
 	private UserService userService;
 		
 	@Test public void createAndAuthenticateUser() {
-		// TODO 07 lancer le test
+		// TODO 07 run test
 		String login = "mmouse";
 		String password = "this is a test";
 		userService.create(login,password);

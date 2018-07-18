@@ -30,7 +30,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Login</th>
-                        <th>Mot de passe</th>
+                        <th>Password</th>
                     </tr>
                 </thead>
                 <tbody>

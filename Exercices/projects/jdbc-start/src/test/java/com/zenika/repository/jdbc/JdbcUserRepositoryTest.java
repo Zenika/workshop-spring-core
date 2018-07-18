@@ -22,7 +22,7 @@ import com.zenika.repository.UserRepository;
  * @author acogoluegnes
  *
  */
-// TODO 03 supprimer @Ignore
+// TODO 03 remove @Ignore
 @Ignore
 public class JdbcUserRepositoryTest {
 	
@@ -31,14 +31,14 @@ public class JdbcUserRepositoryTest {
 	private EmbeddedDatabase dataSource;
 	
 	@Before public void setUp() {
-		// TODO 04 analyser l'initialisation de la base de données mémoire
-		// elle utilise une classe utilitaire de Spring
+		// TODO 04 study the initialization of the in-memory database
+		// it is using a Spring util class
 		dataSource = new EmbeddedDatabaseBuilder()
 			.setType(EmbeddedDatabaseType.H2)
 			.addScript("classpath:/create-tables.sql")
 			.addScript("classpath:/insert-data.sql")
 			.build();
-		// TODO 05 instancier le JdbcUserRepository
+		// TODO 05 instantiate the JdbcUserRepository
 		
 	}
 	
@@ -47,15 +47,15 @@ public class JdbcUserRepositoryTest {
 	}
 	
 	@Test public void getByLoginUserExists() {
-		// TODO 06 tester getByLogin avec un utilisateur qui existe (acogoluegnes)
-		// s'assurer que le User retourné a bien ce login
+		// TODO 06 test getByLogin with an existing user (acogoluegnes)
+		// make sure the returned User object has the right login
 	}
 	
 	@Test public void getByLoginUserDoesNotExist() {
-		// TODO 07 tester getByLogin avec un utilisateur qui n'existe pas
-		// s'assurer que la méthode retourne null
+		// TODO 07 test getByLogin with a user that does not exist
+		// make sure the methods returns null
 		
-		// TODO 08 lancer le test
+		// TODO 08 run the test
 	}
 	
 	@Test public void create() {

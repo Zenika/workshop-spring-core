@@ -14,7 +14,7 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
  * @author acogoluegnes
  *
  */
-// TODO 06 vérifier que la classe de configuration AOP est bien incluse
+// TODO 06 check that AOP configuration class is included
 @Import({
 		ComponentsConfiguration.class,
 		AopConfiguration.class

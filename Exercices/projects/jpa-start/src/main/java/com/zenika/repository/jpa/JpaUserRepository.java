@@ -31,7 +31,7 @@ public class JpaUserRepository implements UserRepository {
 	 */
 	@Override
 	public User getByLogin(String login) {
-		// TODO 01 récupérer un utilisateur par son login
+		// TODO 01 retrieve a user from its login
 		return null;
 	}
 

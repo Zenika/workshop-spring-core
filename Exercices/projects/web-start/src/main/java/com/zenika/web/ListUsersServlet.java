@@ -26,15 +26,15 @@ public class ListUsersServlet extends HttpServlet {
 	
 	@Override
 	public void init() throws ServletException {
-		// TODO 02 récupérer le contexte Spring, puis le bean UserService pour l'assigner à la propriété userService
+		// TODO 02 retrieve Spring context, then UserService bean to assign it to userService property
 		
 	}
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		// TODO 03 analyser le code de la servlet
-		// il liste les Users dans un tablea HTML
+		// TODO 03 study the servlet code
+		// it lists Users in a HTML table
 		StringBuilder builder = new StringBuilder();
 		builder.append("<html><head><title>Spring Workshop</title></head>");
 		builder.append("<table><tr><th>ID</th><th>Login</th><th>Password</th></tr>");

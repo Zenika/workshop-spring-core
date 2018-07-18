@@ -43,7 +43,7 @@ public class UserServiceImplTest {
 		when(userRepository.getByLogin(login)).thenReturn(new User(1L, login, "whatever"));
 		try {
 			userService.authenticate(login, null);
-			Assert.fail("Utilisateur existant, mais mot de passe entré nul, une exception aurait du être lancée");
+			Assert.fail("User exists, but password is null, should have thrown an exception");
 		} catch(IllegalArgumentException e) {
 			// OK
 		}

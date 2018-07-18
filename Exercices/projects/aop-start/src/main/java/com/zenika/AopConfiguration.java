@@ -14,10 +14,10 @@ import com.zenika.aop.LogAspect;
  *
  */
 @Configuration
-//TODO 05 activer le LogAspect avec l'annotation appropriée
+//TODO 05 activate LogAspect using the right annotation
 public class AopConfiguration {
 
-	// TODO 04 déclarer le LogAspect
+	// TODO 04 declare LogAspect
 	
 	
 }

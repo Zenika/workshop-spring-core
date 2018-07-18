@@ -27,7 +27,7 @@ public class JdkProxyTest {
 			@Override
 			public Object invoke(Object proxy, Method method, Object[] args)
 					throws Throwable {
-				LOGGER.info("Appel à {}.{}",method.getDeclaringClass().getName(),method.getName());
+				LOGGER.info("Calling {}.{}",method.getDeclaringClass().getName(),method.getName());
 				Object res = method.invoke(targetService, args);
 				return res;
 			}

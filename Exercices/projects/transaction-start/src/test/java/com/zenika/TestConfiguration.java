@@ -14,7 +14,7 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
  * @author acogoluegnes
  *
  */
-// TODO 06 s'assurer que la classe de configuration des transactions est incluse
+// TODO 06 make sure the transaction configuration class is included
 @Import({
 	ComponentsConfiguration.class,
 	TransactionConfiguration.class

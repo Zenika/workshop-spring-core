@@ -3,12 +3,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- TODO 03 déclarer le UserServiceImpl -->
-	<!-- injecter par setter le userRepository et l'algorithme de hachage (sha-256) -->
-	<!-- ne pas oublier d'appeler la méthode init pour l'initialisation -->
+	<!-- TODO 03 decalre UserServiceImpl -->
+	<!-- inject userRepository and hashing algorithm (sha-256) using setter injection -->
+	<!-- do not forget to call the initialization method -->
 
 	
-	<!-- TODO 02 déclarer le JdbcUserRepository -->
-	<!-- passer le bean dataSource au constructeur -->
+	<!-- TODO 02 declare the JdbcUserRepository -->
+	<!-- pass the dataSource bean to the constructor -->
 	
 </beans>

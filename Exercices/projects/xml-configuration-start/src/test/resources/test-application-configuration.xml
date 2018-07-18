@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- TODO 04 analyser le fichier qui importe les 2 fichiers -->
+	<!-- TODO 04 study the file that imports two other files -->
 	<import resource="classpath:/application-components.xml" />
 	<import resource="classpath:/test-datasource.xml" />
 

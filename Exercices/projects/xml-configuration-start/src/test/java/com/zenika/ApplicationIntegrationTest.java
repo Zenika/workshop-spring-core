@@ -18,7 +18,7 @@ import com.zenika.business.UserService;
  * @author acogoluegnes
  *
  */
-// TODO 05 enlever @Ignore
+// TODO 05 remove @Ignore
 @Ignore
 public class ApplicationIntegrationTest {
 
@@ -27,19 +27,19 @@ public class ApplicationIntegrationTest {
 	private UserService userService;
 	
 	@Before public void setUp() {
-		// TODO 06 initialiser le contexte Spring à partir du fichier test-application-configuration.xml
+		// TODO 06 initialize Spring context from test-application-configuration.xml
 
-		// TODO 07 récupérer le UserService
+		// TODO 07 retrieve UserService
 
 	}
 	
 	@After public void tearDown() {
-		// TODO 08 appeler close sur le contexte à la fin du test
+		// TODO 08 call close() on the context at the en of the test
 
 	}
 	
 	@Test public void createAndAuthenticateUser() {
-		// TODO 09 lancer le test !
+		// TODO 09 run the test!
 		String login = "mmouse";
 		String password = "this is a test";
 		userService.create(login,password);

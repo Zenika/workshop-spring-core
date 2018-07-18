@@ -55,23 +55,24 @@ public class JdbcUserRepository implements UserRepository {
 	
 	@Override
 	public User create(final String login, final String password) {
-		// solution simple, ne permet pas de récupérer l'identifiant généré
-		// tpl.update("insert into users (login,password) values (?,?)",login,password);
+		// simple solution, cannot retrieve the generated identifier
+		 tpl.update("insert into users (login,password) values (?,?)",login,password);
+		 return new User(0L,login,password);
 
-		// solution plus avancée pour pouvoir récupérer l'identifiant généré
-		KeyHolder keyHolder = new GeneratedKeyHolder();
-		tpl.update(new PreparedStatementCreator() {
-			
-			@Override
-			public PreparedStatement createPreparedStatement(Connection con)
-					throws SQLException {
-				PreparedStatement stmt = con.prepareStatement("insert into users (login,password) values (?,?)");
-				stmt.setString(1, login);
-				stmt.setString(2, password);
-				return stmt;
-			}
-		}, keyHolder);
-		return new User(keyHolder.getKey().longValue(),login,password);
+		// advanced solution, can retrieve the generated identifier
+//		KeyHolder keyHolder = new GeneratedKeyHolder();
+//		tpl.update(new PreparedStatementCreator() {
+//
+//			@Override
+//			public PreparedStatement createPreparedStatement(Connection con)
+//					throws SQLException {
+//				PreparedStatement stmt = con.prepareStatement("insert into users (login,password) values (?,?)");
+//				stmt.setString(1, login);
+//				stmt.setString(2, password);
+//				return stmt;
+//			}
+//		}, keyHolder);
+//		return new User(keyHolder.getKey().longValue(),login,password);
 	}
 	
 	/*

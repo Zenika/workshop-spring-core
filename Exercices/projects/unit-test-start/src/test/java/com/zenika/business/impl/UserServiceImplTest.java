@@ -19,7 +19,7 @@ import com.zenika.repository.UserRepository;
  * @author acogoluegnes
  *
  */
-// TODO 02 supprimer @Ignore
+// TODO 02 remove @Ignore
 @Ignore
 public class UserServiceImplTest {
 
@@ -28,8 +28,8 @@ public class UserServiceImplTest {
 	private UserServiceImpl userService;
 	
 	@Before public void setUp() {
-		// TODO 03 initialiser le mock
-		// le mock est ensuite injecté dans le service
+		// TODO 03 initialize the mock
+		// the mock is then injected in the service
 		
 		userService = new UserServiceImpl();
 		userService.setUserRepository(userRepository);
@@ -38,23 +38,23 @@ public class UserServiceImplTest {
 	
 	@Test public void getByLoginNoUser() {
 		String login = "test";
-		// TODO 04 programmer le mock pour qu'il retourne null sur l'appel de getByLogin
+		// TODO 04 configure the ock so that it returns null when getByLogin is called
 
-		// TODO 05 s'assurer que la méthode UserService.authenticate retourne null
+		// TODO 05 make sure UserService.authenticate returns null
 		
-		// on lance la vérification sur les appels au mock
+		// verify that the method has been called
 		verify(userRepository).getByLogin(login);
 		
-		// TODO 06 lancer le test
+		// TODO 06 run the test
 	}
 	
 	@Test public void getByLoginNullEmptyPassword() {
-		// TODO 07 regarder comment tester une méthode qui lance une exception
+		// TODO 07 study how you can test a method that is throwing an exception
 		String login = "test";
 		when(userRepository.getByLogin(login)).thenReturn(new User(1L, login, "whatever"));
 		try {
 			userService.authenticate(login, null);
-			Assert.fail("Utilisateur existant, mais mot de passe entré nul, une exception aurait du être lancée");
+			Assert.fail("User exists, but password is null, should have thrown an exception");
 		} catch(IllegalArgumentException e) {
 			// OK
 		}

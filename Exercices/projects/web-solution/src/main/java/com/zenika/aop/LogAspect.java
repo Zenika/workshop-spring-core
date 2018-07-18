@@ -20,9 +20,9 @@ public class LogAspect {
 	
 	@Around("execution(* com.zenika.business.*.*(..))")
 	public Object log(ProceedingJoinPoint jp) throws Throwable {
-		LOGGER.info("Appel à {}",jp.getSignature().toShortString());
+		LOGGER.info("Calling {}",jp.getSignature().toShortString());
 		Object res = jp.proceed();
-		LOGGER.info("Fin de l'appel");
+		LOGGER.info("Calling done");
 		return res;
 	}
 	

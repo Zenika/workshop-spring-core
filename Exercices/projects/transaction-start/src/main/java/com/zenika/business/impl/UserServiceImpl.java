@@ -19,7 +19,7 @@ import com.zenika.repository.UserRepository;
  * @author acogoluegnes
  *
  */
-// TODO 01 annoter la classe pour que toutes les méthodes soient transactionnelles
+// TODO 01 annotate the class so that all methods are transactional
 public class UserServiceImpl implements UserService {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
@@ -34,14 +34,14 @@ public class UserServiceImpl implements UserService {
 	 * @see com.zenika.business.UserService#authenticate(java.lang.String, java.lang.String)
 	 */
 	@Override
-	// TODO 02 annoter cette méthode pour qu'elle soit en read-only
+	// TODO 02 annotate the method to make it read-only
 	public User authenticate(String login, String password) {
 		User user = userRepository.getByLogin(login);
 		if(user == null) {
 			return null;
 		} else {
 			if(password == null) {
-				throw new IllegalArgumentException("Le mot de passe ne peut être nul !");
+				throw new IllegalArgumentException("Password cannot be empty!");
 			}
 			password = encoder.encode(password);
 			if(password.equals(user.getPassword())) {
@@ -61,7 +61,7 @@ public class UserServiceImpl implements UserService {
 		if(user == null) {
 			user = userRepository.create(login, encoder.encode(password));
 		} else {
-			throw new IllegalArgumentException("Un utilisateur avec ce login existe déjà");
+			throw new IllegalArgumentException("A user with the same login already exists");
 		}
 		return user;
 	}
@@ -71,14 +71,14 @@ public class UserServiceImpl implements UserService {
 	 * @see com.zenika.business.UserService#list()
 	 */
 	@Override
-	// TODO 03 annoter cette méthode pour qu'elle soit en read-only
+	// TODO 03 annotate the method to make it read-only
 	public List<User> list() {
 		return userRepository.list();
 	}
 	
 	public void init() {
 		if(digest == null || digest.trim().length() == 0) {
-			LOGGER.info("Pas de hachage pour les mots de passe");
+			LOGGER.info("No password hashing");
 			encoder = new Encoder() {
 				@Override
 				public String encode(String input) {
@@ -86,7 +86,7 @@ public class UserServiceImpl implements UserService {
 				}
 			};
 		} else {
-			LOGGER.info("Utilisation de l'algorithme {} pour le hachage des mots de passe",digest);
+			LOGGER.info("Using {} algorithm for password hashing",digest);
 			encoder = new MessageDigestEncoder(digest);
 		}
 	}

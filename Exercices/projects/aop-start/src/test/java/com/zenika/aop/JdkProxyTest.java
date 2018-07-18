@@ -18,9 +18,9 @@ import org.slf4j.LoggerFactory;
 public class JdkProxyTest {
 
 	@Test public void logWithProxy() {
-		// TODO 01 analyser l'utilisation d'un proxy JDK pour logguer systématiquement
+		// TODO 01 study JDK proxy usage which systematically logs message
 		
-		// TODO 02 lancer le test et vérifier la présence du log sur la console
+		// TODO 02 run the test, and check that the message is logged
 		final HelloService targetService = new DefaultHelloService();
 		
 		InvocationHandler handler = new InvocationHandler() {
@@ -30,7 +30,7 @@ public class JdkProxyTest {
 			@Override
 			public Object invoke(Object proxy, Method method, Object[] args)
 					throws Throwable {
-				LOGGER.info("Appel à {}.{}",method.getDeclaringClass().getName(),method.getName());
+				LOGGER.info("Calling {}.{}",method.getDeclaringClass().getName(),method.getName());
 				Object res = method.invoke(targetService, args);
 				return res;
 			}

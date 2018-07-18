@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  *
  */
 @Configuration
-// TODO 03 déclarer le scanning pour les classes applicatives
+// TODO 03 declare component scanning for application classes
 public class ComponentsConfiguration {
 
 }

@@ -5,8 +5,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
 
-	<!-- TODO 01 déclarer le bean dataSource -->
-	<!-- utiliser le namespace jdbc, type de base H2 -->
-	<!-- passer les scripts create-tables.sql et insert-data.sql sur le DataSource -->
+	<!-- TODO 01 declare dataSource bean -->
+	<!-- use jdbc namespace, and the type of databse is H2 -->
+	<!-- make the datasource use the scripts create-tables.sql and insert-data.sql -->
 
 </beans>

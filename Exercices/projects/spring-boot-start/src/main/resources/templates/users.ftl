@@ -5,9 +5,9 @@
     <title>Hello Spring Boot</title>
 
     <!--
-        Ces fichiers CSS sont servis par Spring Boot
-        Ils se trouvent dans src/main/resources/static.
-        Ce répertoire est automatiquement exposé par Spring Boot.
+        Those CSS files are delivered by Spring Boot
+        They are located in src/main/resources/static.
+        This folder is automatically exposed by par Spring Boot.
     -->
     <link rel="stylesheet" href="<@spring.url '/styles/bootstrap/3.3.5/css/bootstrap.min.css' />" />
     <link rel="stylesheet" href="<@spring.url '/styles/bootstrap/3.3.5/css/bootstrap-theme.min.css' />" />
@@ -29,7 +29,7 @@
         </div>
 
         <div class="row">
-            <!-- Affiche la variable 'message' mise dans le modèle -->
+            <!-- Display the 'message' variable from the model -->
             <h1>${message}</h1>
 
             <table class="table">
@@ -37,13 +37,13 @@
                     <tr>
                         <th>ID</th>
                         <th>Login</th>
-                        <th>Mot de passe</th>
+                        <th>Password</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Itère sur la liste d'utilisateurs (chargée dans le modèle) -->
+                    <!-- Iterate over the list of users (loaded from the model) -->
                     <#list users as user>
-                    <!-- Affiche un utilisateur -->
+                    <!-- Display a User -->
                     <tr>
                         <td>${user.id}</td>
                         <td>${user.login}</td>

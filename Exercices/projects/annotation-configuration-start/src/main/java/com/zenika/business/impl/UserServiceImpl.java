@@ -19,7 +19,7 @@ import com.zenika.repository.UserRepository;
  * @author acogoluegnes
  *
  */
-// TODO 02 annoter le service (déclaration, injection par propriété, méthode d'initialisation)
+// TODO 02 annotate the service (declaration, field injection, initialization method)
 public class UserServiceImpl implements UserService {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
 			return null;
 		} else {
 			if(password == null) {
-				throw new IllegalArgumentException("Le mot de passe ne peut être nul !");
+				throw new IllegalArgumentException("Password cannot be empty!");
 			}
 			password = encoder.encode(password);
 			if(password.equals(user.getPassword())) {
@@ -60,7 +60,7 @@ public class UserServiceImpl implements UserService {
 		if(user == null) {
 			user = userRepository.create(login, encoder.encode(password));
 		} else {
-			throw new IllegalArgumentException("Un utilisateur avec ce login existe déjà");
+			throw new IllegalArgumentException("A user with the same login already exists");
 		}
 		return user;
 	}
@@ -76,7 +76,7 @@ public class UserServiceImpl implements UserService {
 	
 	public void init() {
 		if(digest == null || digest.trim().length() == 0) {
-			LOGGER.info("Pas de hachage pour les mots de passe");
+			LOGGER.info("No password hashing");
 			encoder = new Encoder() {
 				@Override
 				public String encode(String input) {
@@ -84,7 +84,7 @@ public class UserServiceImpl implements UserService {
 				}
 			};
 		} else {
-			LOGGER.info("Utilisation de l'algorithme {} pour le hachage des mots de passe",digest);
+			LOGGER.info("Using {} algorithm for password hashing",digest);
 			encoder = new MessageDigestEncoder(digest);
 		}
 	}

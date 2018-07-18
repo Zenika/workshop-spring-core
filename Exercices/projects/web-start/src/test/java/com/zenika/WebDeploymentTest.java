@@ -20,13 +20,13 @@ import org.junit.Test;
  * @author acogoluegnes
  * 
  */
-// TODO 05 enlever @Ignore
+// TODO 05 remove @Ignore
 @Ignore
 public class WebDeploymentTest {
 
 	@Before
 	public void setUp() {
-		// TODO 06 activer le profil in-memory-db
+		// TODO 06 activate profile in-memory-db
 		
 	}
 
@@ -37,7 +37,7 @@ public class WebDeploymentTest {
 
 	@Test
 	public void webDeployment() throws Exception {
-		// TODO 07 lancer le test
+		// TODO 07 run the test
 		Server server = initServer();
 		int port = server.getConnectors()[0].getPort();
 

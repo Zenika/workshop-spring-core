@@ -36,11 +36,11 @@ public class UserControllerIntegrationTest {
         mvc = MockMvcBuilders.webAppContextSetup(wac).build();
     }
 
-    // TODO 12 Enlever @Ignore et lancer le test
-    // Le test doit passer
-    // Ce test est "out-of-container": il ne lance pas
-    // le serveur d'applications, mais une version "bouchon"
-    // de Spring MVC
+    // TODO 12 remove @Ignore and run the test
+    // The test must pass
+    // It is "out-of-container": it does not start
+    // the application server, but a mock version
+    // of Spring MVC instead
     @Ignore
     @Test
     public void usersRest() throws Exception {
@@ -50,11 +50,10 @@ public class UserControllerIntegrationTest {
                 .andExpect(jsonPath("$", hasSize(2)));
     }
 
-    // TODO 17 Enlever @Ignore et lancer le test
-    // Le test doit passer
-    // Ce test est "out-of-container": il ne lance pas
-    // le serveur d'applications, mais une version "bouchon"
-    // de Spring MVC
+    // TODO 17 remove @Ignore and run the test
+    // It is "out-of-container": it does not start
+    // the application server, but a mock version
+    // of Spring MVC instead
     @Ignore
     @Test
     public void usersHtml() throws Exception {

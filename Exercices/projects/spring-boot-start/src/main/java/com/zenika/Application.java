@@ -9,35 +9,35 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by acogoluegnes on 20/08/15.
  */
 
-// TODO 01 ajouter l'annotation faisant de cette classe une application Spring Boot
+// TODO 01 add the right annotation to make this class a Spring Boot application
 
 public class Application {
 
     public static void main(String[] args) {
-        // TODO 02 Ajouter le code pour démarrer l'application
+        // TODO 02 add the code to start the application
         
 
-        // TODO 03 Lancer l'application et aller sur http://localhost:8080/actuator
-        // un document JSON doit s'afficher si tout fonctionne correctement
+        // TODO 03 start the application, and go to http://localhost:8080/actuator
+        // if everything works ok, a JSON content should be displayed
 
-        // TODO 04 Aller sur http://localhost:8080/beans
-        // S'assurer que les beans userServiceImpl et jdbcUserRepository
-        // sont bien dans la liste.
-        // Comment se fait-il qu'ils ont été automatiquement créés ?
+        // TODO 04 go to http://localhost:8080/beans
+        // Make sure that userServiceImpl and jdbcUserRepository
+        // are in the ist
+        // How come they have been automatically created?
 
-        // TODO 05 Arreter l'application
+        // TODO 05 stop the application
     }
 
-    // TODO 06 Déclarer un controleur REST "Hello world"
-    // Rappels :
-    //  - utiliser une classe statique interne
-    //  - utiliser les annotations @RestController et @RequestMapping
-    //  - mapper sur l'URL /hello
+    // TODO 06 declare a "Hello world" REST controller
+    // Reminder:
+    //  - use a static inner class
+    //  - use  @RestController and @RequestMapping annotations
+    //  - go to URL /hello
 
-    // TODO 07 Lancer l'application et aller sur http://localhost:8080/hello
-    // Le message doit s'afficher
+    // TODO 07 start the application and go to http://localhost:8080/hello
+    // it should show the message
 
-    // TODO 08 Arreter l'application
+    // TODO 08 stop the application
 
 
 }

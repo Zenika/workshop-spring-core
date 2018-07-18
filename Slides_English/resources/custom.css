@@ -1,0 +1,56 @@
+.blue {
+    color: blue;
+}
+.reveal li {
+    margin: 0.4em 0;
+}
+.reveal ol, .reveal ul {
+    display: block;
+}
+.reveal br.hidden {
+  display: none;
+}
+.reveal pre {
+  margin: 1px 0;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cacaca !important
+}
+.left-column {
+  float:left;
+  width:45%;
+}
+.right-column {
+  float:right;
+  width:45%;
+}
+.right {
+  float:right;
+}
+.clear {
+  clear:both;
+}
+
+.reveal .slides table {
+  border: solid white 1px;
+}
+.reveal .slides table thead th{
+  border: 1px solid white;
+  background: #999;
+  font-size: 22px;
+}
+.reveal .slides tbody tr:nth-child(even) {
+  background: #FFF;
+}
+.reveal .slides tbody tr:nth-child(odd) {
+  background: #CCC;
+}
+.reveal .slides table tbody td{
+  border: 1px solid white;
+  font-size: 22px;
+  line-height: 1;
+  padding: 5px 10px;
+}
+.reveal .slides table tbody td.number {
+  text-align: right;
+}

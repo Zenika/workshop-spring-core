@@ -22,11 +22,11 @@ public class ApplicationIntegrationTest {
 	@Autowired private UserService userService;
 	
 	@Test public void createAndAuthenticateUser() {
-		// TODO 07 lancer le test
-		// on peut s'assurer que les transactions sont bien activées
-		// en rendant le repository transactionnel, avec un niveau de propagation
-		// à mandatory. Il suffit ensuite de commenter les annotations @Transactional
-		// du service et le test doit échouer.
+		// TODO 07 run the test
+		// you can make sure that transactions are activated
+		// by making the repository transactional, with a propagation level
+		// set to mandatory. You just need to comment out the @Transactional
+		// on the service and the test should fail.
 		String login = "mmouse";
 		String password = "this is a test";
 		userService.create(login,password);

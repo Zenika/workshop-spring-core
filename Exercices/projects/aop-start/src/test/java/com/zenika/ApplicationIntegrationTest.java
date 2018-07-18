@@ -22,7 +22,7 @@ public class ApplicationIntegrationTest {
 	@Autowired private UserService userService;
 	
 	@Test public void createAndAuthenticateUser() {
-		// TODO 07 lancer le test et s'assurer de la présence des logs
+		// TODO 07 run the test and make sure the message is logged
 		// (un message pour chaque appel du service)
 		String login = "mmouse";
 		String password = "this is a test";

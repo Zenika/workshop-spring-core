@@ -12,11 +12,11 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
  * @author acogoluegnes
  *
  */
-// TODO 01 ajouter l'annotation appropriée à la classe de configuration
+// TODO 01 add the right annotation for a configuration class
 public class ApplicationConfiguration {
 	
-	// TODO 02 ajouter l'annotation pour que la méthode soit bien prise en compte
-	// (pour la création d'un bean Spring)
+	// TODO 02 add the right annotation, so that the method is taken into account
+	// (for the creation of a Spring bean)
 	public DataSource dataSource() {
 		return new EmbeddedDatabaseBuilder()
 		.setType(EmbeddedDatabaseType.H2)
@@ -25,7 +25,7 @@ public class ApplicationConfiguration {
 		.build();
 	}
 	
-	// TODO 03 déclarer le UserRepository et le UserService
-	// (bien penser à initialiser le UserService)
+	// TODO 03 declare the UserRepository and UserService
+	// (make sure you initialize the UserService)
 
 }

@@ -31,11 +31,11 @@ import com.zenika.repository.jpa.JpaUserRepository;
 @EnableTransactionManagement
 public class TestConfiguration {
 	
-	// TODO 02 déclarer l'EntityManagerFactory
+	// TODO 02 declare the l'EntityManagerFactory
 	
-	// TODO 03 déclarer le JpaUserRepository
+	// TODO 03 declare the JpaUserRepository
 	
-	// TODO 04 déclarer le JpaTransactionManager
+	// TODO 04 declare the JpaTransactionManager
 	
 	
 	@Bean BeanPostProcessor persistenceExceptionBeanPostProcessor() {

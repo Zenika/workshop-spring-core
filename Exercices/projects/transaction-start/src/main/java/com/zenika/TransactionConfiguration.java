@@ -17,12 +17,12 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  *
  */
 @Configuration
-//TODO 05 activer la détection de @Transactional
+//TODO 05 enable detection of @Transactional
 public class TransactionConfiguration {
 
 	@Autowired DataSource dataSource;
 	
-	// TODO 04 déclarer le PlatformTransactionManager approprié
+	// TODO 04 declare the right PlatformTransactionManager
 	
 	
 }

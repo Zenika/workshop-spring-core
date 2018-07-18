@@ -17,33 +17,33 @@ import java.util.List;
 @Controller
 public class UserController {
 
-    // TODO 09 Injecter le UserService avec @Autowired
+    // TODO 09 Inject UserService with @Autowired
 
-    // TODO 10 Ecrire une méthode REST retournant les utilisateurs
+    // TODO 10 Write a REST method returning the list of users
 
-    // TODO 11 Configurer Spring Boot pour initialiser la base de données
-    // Sans cette initialisation, les utilisateurs ne seront pas
-    // dans la base
-    // Ouvrir le fichier application.properties (à la racine du projet)
-    // Ajouter les entrées de configuration suivantes (sans les // devant)
+    // TODO 11 Configure Spring Boot to initialize the database
+    // Without the initialization, users would not be loaded
+    // in the database
+    // Open application.properties (project root)
+    // Add the following entries:
     // spring.datasource.schema=classpath:/create-tables.sql
     // spring.datasource.data=classpath:/insert-data.sql
 
-    // TODO 12 Lancer l'application et aller sur http://localhost:8080/users
-    // Un document JSON avec les utilisateurs doit s'afficher
+    // TODO 12 Start, and go to http://localhost:8080/users
+    // The list of users should be displayed a JSON content
 
-    // TODO 13 Arreter l'application
+    // TODO 13 Stop the application
 
-    // TODO 14 Ecrire une méthode pour afficher un message et les utilisateurs
+    // TODO 14 Write a method to display a message to users
 
 
-    // TODO 15 Ouvrir le fichier src/main/resources/templates/users.ftl
-    // Il s'agit du template qui va etre appelé après la méthode précédemment écrite.
-    // Spring Boot configure automatiquement le moteur de template pour qu'il
-    // recherche les templates dans le répertoire /src/main/resources/templates.
-    // Il n'y a rien à écrire dans users.ftl, il suffit de lire les commentaires
-    // qui expliquent les différents traitements.
+    // TODO 15 Open src/main/resources/templates/users.ftl
+    // It is the template which will be used by the last method
+    // Spring Boot automatically configure the template engine so that
+    // it searches templates within /src/main/resources/templates
+    // There is nothing to do in users.ftl, just read the comments
+    // that explain the different blocks.
 
-    // TODO 16 Lancer l'application et aller sur http://localhost:8080/users
-    // La page HTML des utilisateurs doit s'afficher
+    // TODO 16 Start the application, and go to http://localhost:8080/users
+    // The HTML page with the list of users should be displayed
 }

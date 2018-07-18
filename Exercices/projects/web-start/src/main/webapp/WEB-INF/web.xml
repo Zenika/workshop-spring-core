@@ -6,8 +6,8 @@
 
 	<display-name>Spring</display-name>
 	
-	<!-- TODO 01 configurer le ContextLoaderListener -->
-	<!-- il se configure à partir du fichier /WEB-INF/applicationContext.xml -->
+	<!-- TODO 01 configure the ContextLoaderListener -->
+	<!-- see file /WEB-INF/applicationContext.xml -->
 	
 
 	<servlet>

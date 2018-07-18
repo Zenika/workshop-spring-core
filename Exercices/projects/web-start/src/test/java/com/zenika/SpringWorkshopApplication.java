@@ -26,24 +26,24 @@ public class SpringWorkshopApplication {
 	 * @param args
 	 */
 	public static void main(String[] args) throws Exception {
-		// TODO 08 lancer cette classe. Elle démarre un conteneur web.
-		// La configuration "de prod" de l'application utilisée (cf. positionnement profil).
-		// Elle lance aussi l'interface d'administration de H2.
+		// TODO 08 start this class. It has a Web container in it.
+		// "Production" configuration is used (see profile setting).
+		// It also starts H2 admin console.
 		
-		// TODO 09 ouvrir la page http://localhost:8080/spring-workshop/list-users
-		// Les utilisateurs s'affichent. Pour vérifier que l'application utilise
-		// bien une base de données externe, se connecter à l'interface d'admin de H2
-		// (URL : jdbc:h2:tcp://localhost/mem:spring_workshop, user : sa, mot de passe vide).
-		// Insérer un User en SQL puis réactualiser la page web.
+		// TODO 09 go to http://localhost:8080/spring-workshop/list-users
+		// The list of users is displayed. To make sure the application is using an external database,
+		// go to H2 admin console
+		// (URL : jdbc:h2:tcp://localhost/mem:spring_workshop, user=sa, empty password).
+		// Insert a new User (SQL query), then refresh the Web page.
 		
 		
-		// propriété généralement positionnée au lancement du serveur d'applications
-		// ou dans le web.xml
+		// this property is generally specified when the application server is started
+		// or in web.xml
 		System.setProperty("spring.profiles.active", "standalone-db");
 		
 		Server server = startAndInitServers();
 		
-		System.out.println("Serveur démarré...");
+		System.out.println("Server started...");
 		server.join();
 	}
 	

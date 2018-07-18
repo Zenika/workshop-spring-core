@@ -42,18 +42,18 @@ public class JdbcUserRepository implements UserRepository {
 	 */
 	@Override
 	public User getByLogin(String login) {
-		// TODO 01 écrire la requête pour sélectionner un User via son login
-		// utiliser la méthode queryForObject, passer le rowMapper et le paramètre login
-		// en cas de EmptyResultDataAccessException, retourner null
+		// TODO 01 write the request to retrieve a user from its login
+		// use queryForObject(), with the RowMapper and login parameter
+		// in case of EmptyResultDataAccessException, return null
 		return null;
 	}
 	
 	@Override
 	public User create(final String login, final String password) {
-		// solution simple, ne permet pas de récupérer l'identifiant généré
+		// simple solution, cannot retrieve the generated identifier
 		// tpl.update("insert into users (login,password) values (?,?)",login,password);
 
-		// solution plus avancée pour pouvoir récupérer l'identifiant généré
+		// advanced solution, can retrieve the generated identifier
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 		tpl.update(new PreparedStatementCreator() {
 			
@@ -82,7 +82,7 @@ public class JdbcUserRepository implements UserRepository {
 		
 		@Override
 		public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-			// TODO 02 créer une instance de User dans le RowMapper
+			// TODO 02 create a User instance in the RowMapper
 			return null;
 		}
 		
