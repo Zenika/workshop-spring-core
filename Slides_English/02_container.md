@@ -164,7 +164,7 @@ public class SpringMvcConfiguration extends WebMvcConfigurationSupport {
 
 
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> TP : java-configuration-start
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Labs: java-configuration-start
 
 *   Java configuration
 *   Integration tests
@@ -289,7 +289,7 @@ public class UserServiceImpl implements UserService {
 </jdbc:embedded-database>
 ```
 
-*   Dedicated namespace for embedded database`
+*   Dedicated namespace for embedded database
 *   Hides a ben declaration
     *   "abstraction" over `<bean />`
 
@@ -334,7 +334,7 @@ public class UserServiceImpl implements UserService {
 
 *   Creation, usage, destruction
 
-```xml
+```java
 ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext(
   "classpath:/test-application-configuration.xml"
 );
@@ -353,7 +353,7 @@ ctx.close();
 
 
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> TP : xml-configuration-start
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Labs: xml-configuration-start
 
 *   XML Configuration across multiple files
 *   Integration tests
@@ -377,7 +377,7 @@ ctx.close();
 
 ## Bean declaration
 
-*   Annotation the implementaion with:
+*   Annotate the implementaion with:
     *   `@Component` (most generic)
     *   `@Service`
     *   `@Repository`
@@ -425,15 +425,23 @@ public class ComponentsConfiguration { }
 
 *   Use `@Autowired`
 *   On constructors, fields or methods (setters)
-
+ * Constructor
 ```java
 @Autowired
-public JdbcUserRepository(DataSource dataSource) { } // constructor
-
+public UserServiceImpl(UserRepository userRepository) { ... } // constructor
+```
+ * Field
+```java
 @Autowired
 private UserRepository userRepository; // field
 ```
-
+ * Setter
+```java
+@Autowired
+public void setUserRepository(UserRepository userRepository) { // setter
+  this.userRepository = userRepository;
+}
+```
 
 
 ## @Autowired
@@ -577,7 +585,7 @@ public class ApplicationIntegrationTest {
 
 
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> TP : annotation-configuration-start
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Labs: annotation-configuration-start
 
 *   Configuration with annotations
     *   Injection, scalar values, initialization callback
@@ -657,7 +665,7 @@ decoratedHelloService.hello();
 *   Configuration with annotation
 *   Choice of intercepted methods
 *   Can intercept
-    *   Before, after, arounf a method
+    *   Before, after, around a method
     *   When an exceptions has been thrown
 
 
@@ -708,7 +716,7 @@ public class AopConfiguration {
 
 
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> TP : aop-start
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Labs: aop-start
 
 *   Configuration and activation of an aspect
 *   Integration test
@@ -795,6 +803,6 @@ public class UserServiceImplTest {
 
 
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> TP : unit-test-start
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Labs: unit-test-start
 
 *   Test a service using Mockito

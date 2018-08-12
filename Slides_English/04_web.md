@@ -228,7 +228,7 @@ public class ApplicationConfiguration {
 
 
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> TP : web-start
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Labs: web-start
 
 *   ContextLoaderListener configuration
 *   Externalisation with PropertyPlaceholder

@@ -325,7 +325,7 @@ server:
 
 
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> TP : spring-boot-start
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Labs: spring-boot-start
 
 *   Launch Spring Boot application
 *   REST and HTML controller

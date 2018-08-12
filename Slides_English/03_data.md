@@ -40,7 +40,7 @@ tpl.update(
 );
 ```
 
-*   Thread-safe après initialization
+*   Thread-safe after initialization
 
 
 
@@ -76,7 +76,7 @@ private class UserRowMapper implements RowMapper<User> {
 
 
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> TP : jdbc-start
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Labs: jdbc-start
 
 *   Requests with JdbcTemplate
 *   Testing with embedded database
@@ -162,7 +162,7 @@ public class InfraConfiguration {
 
 ## PlatformTransactionManager
 
-*   Transactio nmanagement abstraction
+*   Transaction management abstraction
 *   Implementation according to persistence layer
     *   DataSourceTransactionManager
     *   HibernateTransactionManager
@@ -188,7 +188,7 @@ public class InfraConfiguration {
 
 
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> TP : transaction-start
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Labs: transaction-start
 
 *   Configuration with `@Transactional`
 *   Declaration of `PlatformTransactionManager`
@@ -297,7 +297,7 @@ public class HibernateUserRepository implements UserRepository {
 
 
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> TP : hibernate-start
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Labs: hibernate-start
 
 *   Requests with Hibernate
 *   SessionFactory configuration
@@ -404,7 +404,7 @@ public class JpaUserRepository implements UserRepository {
 
 
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> TP : jpa-start
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Labs: jpa-start
 
 *   JPA requests
 *   EntityManagerFactory configuration
